@@ -41,7 +41,7 @@ io.on("connection", (socket) => {
 });
 
 (function startReminderJob() {
-    cron.schedule('* * * * *', async () => { // Run every minute
+    cron.schedule('0 9 * * *', async () => { // Run every day at 9:00 AM
         const currentDate = new Date();
 
         // Find tasks that are overdue
